@@ -10,25 +10,25 @@ describe Question::SimpleExpec  do
 		@listavac = Lista.new()
 	end
 
-	describe "Creacion clase lista" do
-		it "Comprobacion de la cabeza de la lista" do
+	describe "Creacion lista" do
+		it "Comprobacion cabeza de la lista" do
 			expect(@milista.head).to eq(@nodo)
 		end
 
-		it "Comprobacion del valor del nodo" do
+		it "Comprobacion valor del nodo" do
 			expect(@nodo.value).to eq(7)
 		end
 
-		it "Extraer primer elemento" do
+		it "Extracción primer elemento" do
 			expect(@milista.pop).to eq(7)
 		end
 
-		it "Añadir valor (push)" do
+		it "Añadimos valor (push)" do
 			@listavac.push(0)
 			expect(@listavac.head.value).to eq(0)     
 		end
 
-		it "Añadir valor antes" do
+		it "Añadimos valor antes" do
 			@listavac.push(65)
 			@listavac.pushbefore(70)
 			expect(@listavac.head.value).to eq (70)
@@ -36,7 +36,7 @@ describe Question::SimpleExpec  do
 
 		end
 		
-		it "Pregunta verdadero falso" do	
+		it "Se Pregunta verdadero falso" do	
 			@PVF = TrueFalse.new("2.-) Es apropiado que una clase Tablero herede de una clase Juego.")
 			expect(@PVF.to_s).to eq ("2.-) Es apropiado que una clase Tablero herede de una clase Juego.\na) Cierto\nb) Falso\n")
 		end

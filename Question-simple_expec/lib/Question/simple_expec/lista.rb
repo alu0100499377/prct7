@@ -27,5 +27,14 @@ class Lista
                 end
         end
 
+	def pushbefore(value)
+                if(@head != nil)
+                        newnodo = Node.new(value, @head, @head.prev)
+			@head = newnodo
+                else
+                        @head = Node.new(value, nil, nil)
+                end
+
+	end
 end
 

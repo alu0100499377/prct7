@@ -20,5 +20,12 @@ class Lista
 		end
 		aux.next = Node.new(val,nil)
 	end
+
+	def mulpush(val)
+                val.each do |x| 
+                push(x)
+                end
+        end
+
 end
 

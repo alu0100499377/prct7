@@ -15,6 +15,28 @@ describe Question::SimpleExpec  do
 			expect(@milista.head).to eq(@nodo)
 		end
 
+		it "Comprobacion del valor del nodo" do
+			expect(@nodo.value).to eq(7)
+		end
+
+		it "Extraer primer elemento" do
+			expect(@milista.pop).to eq(7)
+		end
+
+		it "Añadir valor (push)" do
+			@listavac.push(0)
+			expect(@listavac.head.value).to eq(0)     
+		end
+
+		it "Añadir valor antes" do
+			@listavac.push(65)
+			@listavac.pushbefore(70)
+			expect(@listavac.head.value).to eq (70)
+			expect(@listavac.head.next.value).to eq (65)
+
+		end
+		
+
 		it "Prueba para la siguiente relaciónn de preguntas de selección simple (imprimir de la 1 - 5 y de la 5 a la 1)." do
 
  			@p1 = "1.-)¿Cuál es la salida del siguiente código Ruby?\nclass Xyz\n\tdef pots\n\t\t@nice\n\tend\nend\n\nxyz = Xyz.new\np xyz.pots"

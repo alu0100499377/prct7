@@ -1,24 +1,35 @@
-Node = Struct.new(:value, :next)
+Node = Struct.new(:value, :next, :prev)
+
 class Lista
 
 	attr_reader :head
 
-	def initialize(val)	
-		@head = Node.new(val)
+	def initialize()
+		@head
+	
 	end
 
 	def pop()
-		aux = @head
-		@head = @head.next
-		return aux.value
+		if(@head != nil)
+			aux = @head
+			@head = @head.next
+			return aux.value
+		else
+			return nil
+		end
 	end
 
-	def push(val)
-		aux = @head
-		while (aux.next != nil) do
-			aux = aux.next
+	def push(value)
+		if(@head != nil)
+			aux = @head
+			while (aux.next !=nil)
+				auxprev = aux
+				aux = aux.next
+			end
+			aux.next = Node.new(value, nil, auxprev)
+		else
+			@head = Node.new(value, nil, nil)
 		end
-		aux.next = Node.new(val,nil)
 	end
 
 	def mulpush(val)

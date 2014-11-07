@@ -43,5 +43,17 @@ class Lista
                 end
         end
 
+	def to_s
+		auxiliar = "#{@head.value.to_s}"
+		aux = @head
+		while(aux.next != nil)
+			aux = aux.next
+			auxiliar += " "
+			auxiliar += "#{aux.value.to_s }"
+		end			
+		auxiliar
+	end
+
+
 end
 

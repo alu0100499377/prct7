@@ -36,6 +36,23 @@ describe Question::SimpleExpec  do
 
 		end
 		
+		it "Pregunta verdadero falso" do	
+			@PVF = TrueFalse.new("2.-) Es apropiado que una clase Tablero herede de una clase Juego.")
+			expect(@PVF.to_s).to eq ("2.-) Es apropiado que una clase Tablero herede de una clase Juego.\na) Cierto\nb) Falso\n")
+		end
+
+		it "Introducir varios elementos despues" do
+			VarElm = Lista.new()
+			VarElm.mulpush([3,4,5])
+			expect(VarElm.to_s).to eq("3 4 5")	
+		end
+		
+		it "Introducir varios elementos antes" do
+			VarElmAntes = Lista.new()
+			VarElmAntes.mulpushbefore([8,7,9])
+			expect(VarElmAntes.to_s).to eq("9 7 8")
+		end
+
 
 		it "Prueba para la siguiente relaciónn de preguntas de selección simple (imprimir de la 1 - 5 y de la 5 a la 1)." do
 

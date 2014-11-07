@@ -1,6 +1,6 @@
 require_relative "pregunta"
 
-class  TrueFalse
+class  TrueFalse < Pregunta
 
 	attr_accessor :truefalses
 

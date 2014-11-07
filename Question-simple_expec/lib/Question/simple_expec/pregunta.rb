@@ -5,4 +5,10 @@ class Pregunta
 		@enun = enun
 	end
 
+
+	def to_s
+		cadena = "#{@enun}\n"
+		cadena
+	end
+
 end

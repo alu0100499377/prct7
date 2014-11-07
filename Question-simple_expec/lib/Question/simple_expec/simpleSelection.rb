@@ -11,7 +11,7 @@ class SimpleSelection < Pregunta
 
 	def to_s
 		cadena ="#{@enunciado}\n"
-		@op.each {|m| cadena += "#{m}\n"}	
+		@op.each {|m| cadena += "#{m}\n"}
 		cadena
         end
 

@@ -6,7 +6,7 @@ module Question
        
       before :each do
 	@q = Question::SimpleExpec.new(:text => '2+2 =', :right => 4, :distractor => [9,3,1])
-      end
+      end	
       
       
       context "Cuando se construye una pregunta" do
@@ -17,7 +17,7 @@ module Question
       
       context "Cuando se construye una respuesta" do
 	it "Tiene que tener un valor y ser el correcto" do
-	  expect(@q.right) == 4
+	  expect(@q.right).to eq(4)
 	end
       end
       
@@ -26,9 +26,7 @@ module Question
 	  expect(@q.distractor) == [9,3,1]
 	end
       end
-    
-      
-      
+        
       it "Tiene que tener tres componentes" do
 	#expect{Question::SimpleChoice.new(:text => '5*8=?')}
 	expect{Question::SimpleExpec.new(:text => '5*8=?')}.to raise_error(ArgumentError)

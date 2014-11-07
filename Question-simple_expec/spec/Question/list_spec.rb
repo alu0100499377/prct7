@@ -1,6 +1,8 @@
 # encoding: utf-8
 require 'Question/simple_expec'
 
+module Question
+ class SimpleExpec
 describe Question::SimpleExpec  do
 
 	before :each do 
@@ -109,9 +111,12 @@ describe Question::SimpleExpec  do
 
 			expect(Examen.to_s).to eq(@NP1.to_s + " " + @NP2.to_s + " " + @NP3.to_s + " " + @NP4.to_s + " " +@NP5.to_s)
 			
-			expect(Examen.imprinver).to eq(@NP5.to_s + " " + @NP4.to_s + " " + @NP3.to_s + " " + @NP2.to_s + " " +@NP1.to_s)
+#			expect(Examen.imprinver).to eq(@NP5.to_s + " " + @NP4.to_s + " " + @NP3.to_s + " " + @NP2.to_s + " " +@NP1.to_s)
 
 		end
 
 	end
 end
+end
+end
+

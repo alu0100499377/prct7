@@ -2,16 +2,18 @@ require_relative "pregunta"
 
 class  TrueFalse < Pregunta
 
-	attr_accessor :truefalses
+	attr_accessor :verdfals
 
-	def initialize(enun)
-		super(enun)
-		@truefalses = ['a) Cierto','b) Falso']
+	def initialize(enunciado)
+		super(enunciado)
+		@verdfals = ['a) Cierto','b) Falso']
 	end
 
 	def to_s
-		cadena ="#{@enun}\n"
-		@truefalses.each {|m| cadena += "#{m}\n"}
+		cadena ="#{@enunciado}\n"
+		@verdfals.each {|m| cadena += "#{m}\n"}
 		cadena
-        end	
+        end
+
+	
 end

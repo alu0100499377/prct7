@@ -1,13 +1,15 @@
 class Pregunta
-	attr_accessor :enun
 
-	def initialize(enun)
-		@enun = enun
+	attr_accessor :enunciado
+
+	def initialize(enunciado)
+		@enunciado = enunciado
 	end
 
 	def to_s
-		cadena = "#{@enun}\n"
+		cadena = "#{@enunciado}\n"
 		cadena
+
 	end
 
 end

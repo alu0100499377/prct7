@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'Question/simple_expec'
 
 describe Question::SimpleExpec do

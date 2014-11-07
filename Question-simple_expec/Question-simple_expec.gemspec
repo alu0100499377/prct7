@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Question::SimpleExpec::VERSION
   spec.authors       = ["Juan Ignacio Hita Manso y Gabriel García Ventura"]
   spec.email         = ["alu0100713213@ull.edu.es"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.description   = %q{TODO: Practica 7 de Lenguajes y Paradigmas de la programacion}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
   spec.license       = "MIT"

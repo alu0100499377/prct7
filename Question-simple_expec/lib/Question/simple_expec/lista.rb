@@ -54,6 +54,19 @@ class Lista
 		auxiliar
 	end
 
+    def imprinver
+        aux = @head
+        while(aux.next != nil)
+        	aux = aux.next     
+        end
+        salida = "#{aux.value.to_s}"
+        while(aux.prev != nil)
+            aux = aux.prev
+            salida += " "
+            salida += "#{aux.value.to_s}"
+        end
+        salida
+    end
 
 end
 
